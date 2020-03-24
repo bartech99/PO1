@@ -1,0 +1,4 @@
+Marka - Model - Rok produkcji - Pojemnosc silnika - Przebieg - Typ skrzyni biegow (manualna/automatyczna):
+Opel	Vectra	2009	1	1	automat
+Fiat	Tipo	2018	2	2	manual
+Volkswagen	Passat	2001	3	3	automat

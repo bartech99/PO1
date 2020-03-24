@@ -22,8 +22,8 @@ int menu::list()
 {
 
 	cout << "--- MENU ---" << endl << endl;
-	cout << "n1. Wczytaj z pliku" << endl;
-	cout << "n2. Zapisz wyniki w nowym pliku" << endl << endl;
+	cout << "1. Wczytaj z pliku" << endl;
+	cout << "2. Zapisz wyniki w nowym pliku" << endl << endl;
 	cout << "3. Dodaj auto" << endl;
 	cout << "n4. Usun auto" << endl << endl;
 	cout << "5. Wyswietl wszystkie samochody" << endl;

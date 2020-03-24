@@ -18,9 +18,11 @@ int main()
 		switch (m.choise)
 		{
 		case 1:
+			c.file_in();
 			break;
 
 		case 2:
+			c.file_out();
 			break;
 
 		case 3:
