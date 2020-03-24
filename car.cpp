@@ -105,15 +105,12 @@ int car::file_in()
 		//wczytuje kolejne linie az do konca pliku i wrzuca je do wektora
 		while (!file.eof())
 		{
-			file >> *this;
+			car temp;
+			file >> temp;
 
 			//sprawdza czy linia nie jest pusta
-			if (1)
-			{
-				cout << "pusta" << endl;
-			}
-
-			cars.push_back(*this);
+			if (temp.brand != "brak")
+				cars.push_back(temp);
 		}
 
 		cout << "Odczyt wykonany pomyslnie!" << endl;
