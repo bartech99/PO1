@@ -26,7 +26,17 @@ public:
 	
 	//metody
 	int add();
+
+	//metody sortowania
+	friend bool comp_by_brand(const car& a, const car& b);
+	friend bool comp_by_model(const car& a, const car& b);
+	friend bool comp_by_year(const car& a, const car& b);
+	friend bool comp_by_capacity(const car& a, const car& b);
+	friend bool comp_by_milleage(const car& a, const car& b);
+	friend bool comp_by_gearbox(const car& a, const car& b);
 	int show_sort(int);
+
+	//metody cz2
 	int show_all();
 	int show_condition(int);
 	int find();

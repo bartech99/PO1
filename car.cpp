@@ -20,6 +20,41 @@ int car::add()
 	return 0;
 }
 
+
+
+
+bool comp_by_brand(const car& a, const car& b)
+{
+	return a.brand < b.brand;
+}
+
+bool comp_by_model(const car& a, const car& b)
+{
+	return a.model < b.model;
+}
+
+bool comp_by_year(const car& a, const car& b)
+{
+	return a.year < b.year;
+}
+
+bool comp_by_capacity(const car& a, const car& b)
+{
+	return a.capacity < b.capacity;
+}
+
+bool comp_by_milleage(const car& a, const car& b)
+{
+	return a.milleage < b.milleage;
+}
+
+bool comp_by_gearbox(const car& a, const car& b)
+{
+	return a.gearbox < b.gearbox;
+}
+
+
+
 int car::show_sort(int choise)
 {
 	bool order = false;
@@ -30,32 +65,32 @@ int car::show_sort(int choise)
 	{
 	case 1:
 
-		//
+		sort(cars.begin(), cars.end(), &comp_by_brand);
 		break;
 
 	case 2:
 
-		//
+		sort(cars.begin(), cars.end(), &comp_by_model);
 		break;
 
 	case 3:
 
-		//
+		sort(cars.begin(), cars.end(), &comp_by_year);
 		break;
 
 	case 4:
 
-		//
+		sort(cars.begin(), cars.end(), &comp_by_capacity);
 		break;
 
 	case 5:
 
-		//
+		sort(cars.begin(), cars.end(), &comp_by_milleage);
 		break;
 
 	case 6:
 
-		//
+		sort(cars.begin(), cars.end(), &comp_by_gearbox);
 		break;
 
 	}
@@ -467,6 +502,7 @@ car::car(string b, string m, unsigned short y, unsigned short c, unsigned int mi
 
 car::~car()
 {}
+
 
 
 
