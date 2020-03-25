@@ -29,7 +29,7 @@ int menu::list()
 	cout << "5. Wyswietl wszystkie samochody" << endl;
 	cout << "6. Wyswietl warunkowo liste samochodow" << endl;
 	cout << "7. Wyswietl dane pojedynczego samochodu" << endl;
-	cout << "n8. Posortuj samochody" << endl << endl;
+	cout << "8. Posortuj samochody" << endl << endl;
 	cout << "9. Wyjscie z programu" << endl << endl;
 
 	cout << "Twoj wybor: ";

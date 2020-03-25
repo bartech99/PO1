@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <conio.h>
+#include <algorithm>
 using namespace std;
 
 
@@ -21,6 +22,50 @@ int car::add()
 
 int car::show_sort(int choise)
 {
+	bool order = false;
+	cout << "0 - rosnaco, 1 - malejaco: ";
+	cin >> order;
+
+	switch (choise)
+	{
+	case 1:
+
+		//
+		break;
+
+	case 2:
+
+		//
+		break;
+
+	case 3:
+
+		//
+		break;
+
+	case 4:
+
+		//
+		break;
+
+	case 5:
+
+		//
+		break;
+
+	case 6:
+
+		//
+		break;
+
+	}
+
+	if (order)
+		reverse(cars.begin(), cars.end());
+
+	cout << endl;
+	show_all();
+
 	return 0;
 }
 
