@@ -1,4 +1,7 @@
 Marka - Model - Rok produkcji - Pojemnosc silnika - Przebieg - Typ skrzyni biegow (manualna/automatyczna):
-Opel	Vectra	2009	1	1	automat
-Fiat	Tipo	2018	2	2	manual
-Volkswagen	Passat	2001	3	3	automat
+Fiat	Tipo	2018	1398	30500	manualna
+Opel	Vectra	2009	2198	180000	automatyczna
+Nissan	Micra	2012	1798	96000	automatyczna
+Volkswagen	Passat	2001	2498	370000	manualna
+Opel	Vectra	2005	1798	130000	manualna
+BMW	X5	2019	4799	20000	automatyczna

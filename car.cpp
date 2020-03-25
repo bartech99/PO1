@@ -19,18 +19,304 @@ int car::add()
 	return 0;
 }
 
+int car::show_sort(int choise)
+{
+	return 0;
+}
+
 
 
 int car::show_all()
 {
 	cout << "--- Wszystkie samochody ---" << endl << endl;
 	cout << "Marka - Model - Rok produkcji - Pojemnosc silnika - Przebieg - Typ skrzyni biegow (manualna/automatyczna):" << endl;
-	for (unsigned int i = 0; i < cars.size(); i++)
+	if (cars.size() == 0)
 	{
-		cout << cars[i] << endl;
+		car temp;
+		cout << temp << endl;
+	}
+	else
+	{
+		for (unsigned int i = 0; i < cars.size(); i++)
+		{
+			cout << cars[i] << endl;
+		}
 	}
 	return 0;
 }
+
+
+int car::show_condition(int choise)
+{
+	string choise1;
+	unsigned int choise2 = 0;
+	bool choise3 = false;
+	bool var_choise = false;
+	unsigned int it = 0;
+	car result;
+
+	switch (choise)
+	{
+	case 1:
+
+		cout << "Podaj marke: ";
+		cin >> choise1;
+		cout << endl << "--- Pasujace wyniki ---" << endl;
+
+		for (unsigned int i = 0; i < cars.size(); i++)
+		{
+			result = cars[i];
+			if (result.brand == choise1)
+			{
+				cout << ++it << ". " << result << endl;
+			}
+		}
+
+		if (it == 0)
+		{
+			cout << "Brak pasujacych wynikow." << endl;
+		}
+
+		break;
+
+	case 2:
+
+		cout << "0 - wieksze lub rowne, 1 - mniejsze niz: ";
+		cin >> choise3;
+		cout << endl << "Wartosc: ";
+		cin >> choise2;
+		cout << endl << "--- Pasujace wyniki ---" << endl;
+
+		if (choise3)
+		{
+			for (unsigned int i = 0; i < cars.size(); i++)
+			{
+				result = cars[i];
+				if (result.year < choise2)
+				{
+					cout << ++it << ". " << result << endl;
+				}
+			}
+		}
+		else
+		{
+			for (unsigned int i = 0; i < cars.size(); i++)
+			{
+				result = cars[i];
+				if (result.year >= choise2)
+				{
+					cout << ++it << ". " << result << endl;
+				}
+			}
+		}
+
+		if (it == 0)
+		{
+			cout << "Brak pasujacych wynikow." << endl;
+		}
+
+		break;
+
+	case 3:
+
+		cout << "0 - wieksze lub rowne, 1 - mniejsze niz: ";
+		cin >> choise3;
+		cout << endl << "Wartosc: ";
+		cin >> choise2;
+		cout << endl << "--- Pasujace wyniki ---" << endl;
+
+		if (choise3)
+		{
+			for (unsigned int i = 0; i < cars.size(); i++)
+			{
+				result = cars[i];
+				if (result.capacity < choise2)
+				{
+					cout << ++it << ". " << result << endl;
+				}
+			}
+		}
+		else
+		{
+			for (unsigned int i = 0; i < cars.size(); i++)
+			{
+				result = cars[i];
+				if (result.capacity >= choise2)
+				{
+					cout << ++it << ". " << result << endl;
+				}
+			}
+		}
+
+		if (it == 0)
+		{
+			cout << "Brak pasujacych wynikow." << endl;
+		}
+		break;
+
+	case 4:
+
+		cout << "0 - wieksze lub rowne, 1 - mniejsze niz: ";
+		cin >> choise3;
+		cout << endl << "Wartosc: ";
+		cin >> choise2;
+		cout << endl << "--- Pasujace wyniki ---" << endl;
+
+		if (choise3)
+		{
+			for (unsigned int i = 0; i < cars.size(); i++)
+			{
+				result = cars[i];
+				if (result.milleage < choise2)
+				{
+					cout << ++it << ". " << result << endl;
+				}
+			}
+		}
+		else
+		{
+			for (unsigned int i = 0; i < cars.size(); i++)
+			{
+				result = cars[i];
+				if (result.milleage >= choise2)
+				{
+					cout << ++it << ". " << result << endl;
+				}
+			}
+		}
+
+		if (it == 0)
+		{
+			cout << "Brak pasujacych wynikow." << endl;
+		}
+		break;
+
+	case 5:
+
+		cout << "m - manualna, a - automatyczna: ";
+		cin >> choise1;
+
+		while (choise1 != "a" && choise1 != "m")
+		{
+			cout << "Niepoprawny wybor." << endl;
+			cout << "m - manualna, a - automatyczna: ";
+			cin >> choise1;
+		}
+
+		cout << endl << "--- Pasujace wyniki ---" << endl;
+
+		if (choise1 == "m")
+		{
+			for (unsigned int i = 0; i < cars.size(); i++)
+			{
+				result = cars[i];
+				if (result.gearbox == "manualna")
+				{
+					cout << ++it << ". " << result << endl;
+				}
+			}
+		}
+		else
+		{
+			for (unsigned int i = 0; i < cars.size(); i++)
+			{
+				result = cars[i];
+				if (result.gearbox == "automatyczna")
+				{
+					cout << ++it << ". " << result << endl;
+				}
+			}
+		}
+
+		if (it == 0)
+		{
+			cout << "Brak pasujacych wynikow." << endl;
+		}
+
+		break;
+	}
+	return 0;
+}
+
+
+
+int car::find()
+{
+	unsigned int it = 0;
+	car result;
+	string f_brand, f_model;
+
+	cout << "--- Wyszukiwanie szczegolow samochodu ---" << endl << endl;
+	cout << "Marka: ";
+	cin >> f_brand;
+	cout << "Model: ";
+	cin >> f_model;
+	cout << endl;
+	
+	cout << "--- Pasujace wyniki ---" << endl;
+	for (unsigned int i = 0; i < cars.size(); i++)
+	{
+		result = cars[i];
+		if (result.brand == f_brand && result.model == f_model)
+		{
+			cout << ++it << ". " << result << endl;
+		}
+	}
+
+	if (!it)
+	{
+		cout << "Nie znaleziono pasujacych wynikow." << endl;
+	}
+
+	return 0;
+}
+
+
+
+int car::remove()
+{
+	unsigned int it = 0, pos_to_remove = 0;
+	car result;
+	string f_brand, f_model;
+	vector <unsigned int> pos;	 //kojarzy liczbe porzadkowa znalezionego obiektu z jej pozycja w wektorze
+
+	cout << "--- Usuwanie samochodu ---" << endl << endl;
+	cout << "Marka: ";
+	cin >> f_brand;
+	cout << "Model: ";
+	cin >> f_model;
+	cout << endl;
+
+	cout << "--- Pasujace wyniki ---" << endl;
+	for (unsigned int i = 0; i < cars.size(); i++)
+	{
+		result = cars[i];
+		if (result.brand == f_brand && result.model == f_model)
+		{
+			cout << ++it << ". " << result << endl;
+			pos.push_back(i);
+		}
+	}
+
+	while(1)	//pobiera i sprawdza indeks
+	{
+		cout << endl << "Usun pozycje nr: ";
+		cin >> pos_to_remove;
+
+		if (pos_to_remove > pos.size() || pos_to_remove < 1)
+			cout << "Nieprawidlowa wartosc." << endl;
+		else
+			break;
+	}
+
+	cars.erase(cars.begin() + pos[pos_to_remove-1]);
+
+	cout << endl << "Pojazd zostal usuniety!" << endl;
+
+	return 0;
+}
+
+
 
 int car::file_out()
 {
@@ -76,6 +362,8 @@ int car::file_out()
 	return 0;
 }
 
+
+
 int car::file_in()
 {
 	fstream file;
@@ -115,7 +403,6 @@ int car::file_in()
 
 		cout << "Odczyt wykonany pomyslnie!" << endl;
 	}
-
 	return 0;
 }
 

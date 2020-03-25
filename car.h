@@ -7,6 +7,8 @@
 #include <conio.h>
 using namespace std;
 
+
+
 class car
 {
 	//zmienne
@@ -17,13 +19,18 @@ class car
 	unsigned int milleage;
 	string gearbox;
 
-public:
 	//wektor
 	vector <car> cars;
 
+public:
+	
 	//metody
 	int add();
+	int show_sort(int);
 	int show_all();
+	int show_condition(int);
+	int find();
+	int remove();
 	int file_out();
 	int file_in();
 
